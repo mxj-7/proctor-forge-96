@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import StudentDashboard from "./pages/StudentDashboard";
 import TeacherDashboard from "./pages/TeacherDashboard";
+import ExamCenter from "./pages/ExamCenter";
+import LabCenter from "./pages/LabCenter";
+import ReportsCenter from "./pages/ReportsCenter";
+import Profile from "./pages/Profile";
+import QuestionBank from "./pages/QuestionBank";
 import { Layout } from "./components/layout";
 import NotFound from "./pages/NotFound";
 
@@ -22,11 +27,11 @@ const App = () => (
           <Route element={<Layout />}>
             <Route path="/dashboard" element={<StudentDashboard />} />
             <Route path="/teacher" element={<TeacherDashboard />} />
-            <Route path="/exams" element={<div className="p-8 text-center">考试中心功能开发中...</div>} />
-            <Route path="/lab" element={<div className="p-8 text-center">实验中心功能开发中...</div>} />
-            <Route path="/reports" element={<div className="p-8 text-center">成绩报告功能开发中...</div>} />
-            <Route path="/profile" element={<div className="p-8 text-center">个人中心功能开发中...</div>} />
-            <Route path="/question-bank" element={<div className="p-8 text-center">题库管理功能开发中...</div>} />
+            <Route path="/exams" element={<ExamCenter />} />
+            <Route path="/lab" element={<LabCenter />} />
+            <Route path="/reports" element={<ReportsCenter />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/question-bank" element={<QuestionBank />} />
             <Route path="/exam-manage" element={<div className="p-8 text-center">考试管理功能开发中...</div>} />
             <Route path="/marking" element={<div className="p-8 text-center">批改中心功能开发中...</div>} />
             <Route path="/lab-manage" element={<div className="p-8 text-center">实验管理功能开发中...</div>} />
